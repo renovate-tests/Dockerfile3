@@ -1,1 +1,46 @@
-{}
+{
+  "extends": [
+    "docker:enableMajor",
+    "docker:pinDigests",
+    "group:recommended"
+  ],
+  "prCreation": "not-pending",
+  "prHourlyLimit": 1,
+  "packageRules": [
+    {
+      "datasources": ["docker"],
+      "packagePatterns": ["^mcr.microsoft.com/dotnet/core"],
+      "groupName": "NET Core Docker containers",
+      "allowedVersions": "<2.2.0"
+    },
+    {
+      "managers": ["nuget"],
+      "packagePatterns": ["^Microsoft.AspNetCore"],
+      "groupName": "aspnetcore",
+      "allowedVersions": "<2.2.0",
+      "versioning": "semver"
+    },
+    {
+      "managers": ["nuget"],
+      "packagePatterns": ["^Microsoft.Extensions"],
+      "groupName": "aspnet-extensions",
+      "allowedVersions": "<2.2.0",
+      "versioning": "semver"
+    },
+    { 
+      "managers": ["nuget"],
+      "packagePatterns": ["^Microsoft.EntityFrameworkCore"],
+      "groupName": "dotnet-efcore"
+    },
+    {
+      "managers": ["nuget"],
+      "packagePatterns": ["^Microsoft.VisualStudio.Web.CodeGeneration"],
+      "groupName": "aspnet-scaffolding"
+    },
+    {
+      "datasources": ["docker"],
+      "updateTypes": ["digest"],
+      "schedule": ["before 3am on the first day of the month"]
+    }
+  ]
+}
