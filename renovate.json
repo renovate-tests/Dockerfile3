@@ -5,7 +5,7 @@
     "group:recommended"
   ],
   "prCreation": "not-pending",
-  "prHourlyLimit": 1,
+  "prHourlyLimit": 0,
   "packageRules": [
     {
       "datasources": ["docker"],
