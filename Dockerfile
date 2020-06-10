@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.1.18@sha256:7000c71ad64ef922005ac3ea9ebd0daf2ecd4c4329dadfe56ca3b80433c82a51 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1.19@sha256:c94e6889cdbaf5a89106733a798ec991da0a57fdb552127643153ce2250346b5 AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.1.806@sha256:bdee2c2664cd8db7c68d782cb91fa722eca2730c84f9ee8040029b9dcd8fcc3b AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.1.807@sha256:a43f9191449c65901d7b7573b225111c644f7a8028017e1d0cd80d9853e51ff2 AS build
 WORKDIR /src
 COPY . .
 RUN [...]
