@@ -4,7 +4,6 @@
     "docker:pinDigests",
     "group:recommended"
   ],
-  "prCreation": "not-pending",
   "prHourlyLimit": 0,
   "packageRules": [
     {
@@ -39,8 +38,7 @@
     },
     {
       "datasources": ["docker"],
-      "updateTypes": ["digest"],
-      "schedule": ["before 3am on the first day of the month"]
+      "updateTypes": ["digest"]
     }
   ]
 }
