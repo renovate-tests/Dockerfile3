@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/core/aspnet:2.1.18@sha256:7000c71ad64ef922005ac3ea
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/core/sdk:2.1.806@sha256:bdee2c2664cd8db7c68d782cb91fa722eca2730c84f9ee8040029b9dcd8fcc3b AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2.402@sha256:092a177c84f1dde6aacf0a60ce5f10132db017381f21912ecc6bb4a5eabae651 AS build
 WORKDIR /src
 COPY . .
 RUN [...]
